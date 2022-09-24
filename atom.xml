@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-22T10:09:53.880Z</updated>
+  <updated>2022-09-24T17:18:39.273Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,31 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>测试博客</title>
-    <link href="http://example.com/2022/09/22/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://example.com/2022/09/22/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/</id>
-    <published>2022-09-22T10:09:14.000Z</published>
-    <updated>2022-09-22T10:09:53.880Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="测试博客"><a href="#测试博客" class="headerlink" title="测试博客"></a>测试博客</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;测试博客&quot;&gt;&lt;a href=&quot;#测试博客&quot; class=&quot;headerlink&quot; title=&quot;测试博客&quot;&gt;&lt;/a&gt;测试博客&lt;/h1&gt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>我的第一篇博客文章</title>
     <link href="http://example.com/2022/09/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
     <id>http://example.com/2022/09/20/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</id>
     <published>2022-09-20T06:23:16.000Z</published>
-    <updated>2022-09-20T06:35:16.642Z</updated>
+    <updated>2022-09-24T17:18:39.273Z</updated>
     
     <content type="html"><![CDATA[<h1 id="我的博客文章编写"><a href="#我的博客文章编写" class="headerlink" title="我的博客文章编写"></a>我的博客文章编写</h1> <span id="more"></span><h2 id="网安1班"><a href="#网安1班" class="headerlink" title="网安1班"></a>网安1班</h2><p>czk</p><h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><blockquote><p>整了六个多小时终于整出来了这玩意<br>不容易啊（doge）</p></blockquote><h2 id="我的博客网站"><a href="#我的博客网站" class="headerlink" title="我的博客网站"></a>我的博客网站</h2><blockquote><p><a href="https://chenzhengkai10.github.io/">https://chenzhengkai10.github.io/</a></p></blockquote>]]></content>
     
@@ -50,6 +30,10 @@
     
     
     
+    <category term="第一篇" scheme="http://example.com/categories/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+    
+    
+    <category term="第一篇" scheme="http://example.com/tags/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     
   </entry>
   
