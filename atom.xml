@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-10-22T17:10:39.210Z</updated>
+  <updated>2022-10-22T18:17:48.136Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,10 +21,16 @@
     <link href="http://example.com/2022/10/23/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02022-10-23/"/>
     <id>http://example.com/2022/10/23/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02022-10-23/</id>
     <published>2022-10-22T17:09:38.000Z</published>
-    <updated>2022-10-22T17:10:39.210Z</updated>
+    <updated>2022-10-22T18:17:48.136Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="web学习笔记1"><a href="#web学习笔记1" class="headerlink" title="web学习笔记1"></a>web学习笔记1</h1> <span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">show_source(_FLIE_);</span><br><span class="line">echo $_GET[&#x27;hello&#x27;];</span><br><span class="line">$page=$_GET[&#x27;page&#x27;];</span><br><span class="line">while (strstr($page,  &quot;php://&quot;))  &#123;</span><br><span class="line">    $page=str_replace(&quot;php://&quot;, &quot;&quot;, $page);</span><br><span class="line"> &#125;</span><br><span class="line"> include($page);</span><br><span class="line"> ?&gt;</span><br></pre></td></tr></table></figure><p>1、show_source()(与highlight_file()函数作用相同)函数的作用是将括号中的PHP文件高亮显示，而_FILE_是PHP中的常量，代表本PHP文件的绝对路径，因此show_source(<em>FILE</em>)即将本PHP文件高亮显示。<br>2、strstr()函数：strstr($txt1,$txt2)，查找txt2是否在txt1中存在，如果是则返回txt1中txt2及其后面的部分。因此while(strstr($page, “php:&#x2F;&#x2F;“))即查找$page变量中有无包含php：&#x2F;&#x2F;,当没有时退出循环。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;web学习笔记1&quot;&gt;&lt;a href=&quot;#web学习笔记1&quot; class=&quot;headerlink&quot; title=&quot;web学习笔记1&quot;&gt;&lt;/a&gt;web学习笔记1&lt;/h1&gt;</summary>
     
     
     
+    <category term="web学习笔记" scheme="http://example.com/categories/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
     <category term="web学习笔记" scheme="http://example.com/tags/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
