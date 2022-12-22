@@ -1,3 +1,4 @@
+http://example.com/2022/12/22/sqli-labs-2/
 http://example.com/2022/12/21/sqli-labs-1/
 http://example.com/2022/12/21/php%E5%AD%A6%E4%B9%A02022-12-21/
 http://example.com/2022/12/20/php%E5%AD%A6%E4%B9%A02022-12-20/

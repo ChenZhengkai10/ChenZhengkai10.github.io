@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2022/12/22/sqli-labs-2/</loc>
+    
+    <lastmod>2022-12-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2022/12/21/sqli-labs-1/</loc>
     
-    <lastmod>2022-12-21</lastmod>
+    <lastmod>2022-12-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -112,7 +121,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2022-12-21</lastmod>
+    <lastmod>2022-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -120,28 +129,28 @@
   
   <url>
     <loc>http://example.com/tags/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-12-21</lastmod>
+    <lastmod>2022-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/php%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-12-21</lastmod>
+    <lastmod>2022-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/sqli-labs/</loc>
-    <lastmod>2022-12-21</lastmod>
+    <lastmod>2022-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/%E7%AC%AC%E4%B8%80%E7%AF%87/</loc>
-    <lastmod>2022-12-21</lastmod>
+    <lastmod>2022-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -150,28 +159,28 @@
   
   <url>
     <loc>http://example.com/categories/php%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-12-21</lastmod>
+    <lastmod>2022-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/sqli-labs/</loc>
-    <lastmod>2022-12-21</lastmod>
+    <lastmod>2022-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-12-21</lastmod>
+    <lastmod>2022-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/%E7%AC%AC%E4%B8%80%E7%AF%87/</loc>
-    <lastmod>2022-12-21</lastmod>
+    <lastmod>2022-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
