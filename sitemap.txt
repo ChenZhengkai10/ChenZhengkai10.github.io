@@ -1,3 +1,4 @@
+http://example.com/2023/01/09/sqli-labs-21-22/
 http://example.com/2023/01/07/sqli-labs-17-20/
 http://example.com/2023/01/07/sqli-labs-11-16/
 http://example.com/2023/01/06/sqli-labs-9-10/
