@@ -34,13 +34,13 @@
   <!-- 页面元数据 -->
   <title>关于and 1=1和and 1=2学习记录 - Oblivion10.</title>
   <meta name="keywords" content="sqli-labs,null">
-  <meta desc name="description" content="# 关于 and 1=1 和 and 1=2 学习记录 - ChenZhengkai10 - Oblivion10.">
+  <meta desc name="description" content="关于and 1&#x3D;1和and 1&#x3D;2学习记录 - ChenZhengkai10 - Oblivion10.">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于and 1&#x3D;1和and 1&#x3D;2学习记录">
 <meta property="og:url" content="https://chenzhengkai10.github.io/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="Oblivion10.">
-<meta property="og:description" content="# 关于 and 1&#x3D;1 和 and 1&#x3D;2 学习记录">
+<meta property="og:description" content="关于and 1&#x3D;1和and 1&#x3D;2学习记录">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-01-10T13:06:28.000Z">
@@ -1744,7 +1744,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1706095928514),
+    lastupdate: new Date(1706096028352),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2646,33 +2646,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="关于and-11和and-12学习记录"><a class="markdownIt-Anchor" href="#关于and-11和and-12学习记录">#</a> 关于 and 1=1 和 and 1=2 学习记录</h1>
-<span id="more"></span>
-<p>在 23 关时，我又重新对于这个 and 1=1 和 and 1=2 以及在注入时用一个错误的 id 后面的 union  select 才能回显产生了很多疑问，这个博客是记录一下询问后的学习记录</p>
-<h2 id="问题"><a class="markdownIt-Anchor" href="#问题">#</a> 问题</h2>
-<blockquote>
+    <h1 id="关于and-1-x3D-1和and-1-x3D-2学习记录"><a href="#关于and-1-x3D-1和and-1-x3D-2学习记录" class="headerlink" title="关于and 1&#x3D;1和and 1&#x3D;2学习记录"></a>关于and 1&#x3D;1和and 1&#x3D;2学习记录</h1><span id="more"></span>
+
+<p>在23关时，我又重新对于这个and 1&#x3D;1和and 1&#x3D;2以及在注入时用一个错误的id后面的union  select才能回显产生了很多疑问，这个博客是记录一下询问后的学习记录</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
 <p>问题如下：</p>
-<p>为什么 1=1 时候后面的注入语句不会执行，1=2 就执行了或者说我用错误的 id 也能执行，正确的 id 就不执行</p>
+<p>为什么1&#x3D;1时候后面的注入语句不会执行，1&#x3D;2就执行了或者说我用错误的id也能执行，正确的id就不执行</p>
 </blockquote>
-<p>其实不能说是不执行而是 sql 语句中的 limit 导致 union select 没办法查出回显点</p>
-<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_20230110_211040.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_20230110_211040.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt></p>
-<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt></p>
-<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/2.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt></p>
-<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/3.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt></p>
-<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/4.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt></p>
-<h2 id="解答"><a class="markdownIt-Anchor" href="#解答">#</a> 解答</h2>
-<p>解答如下：</p>
-<p>首先用 1 去查，在数据库里面变成查 id=1 的数据，很明显，数据库肯定是有这个数据<br>
-但是如果你 id=100，数据库没有存那么多数据，那么就会回显后面的 union select 1,2,3<br>
- 这里的 - 1 同理，因为数据库没有这个 id=-1 的数据<br>
-然后是这个 and， 1’ and 1=2 此时这个结果为 false，在数据库里面是查不出来数据的，所以就会回显后面的 union select 1,2,3<br>
- 但是如果是 1 ’ and 1=1 这个结果是 true，那么就会回显前面的结果</p>
-<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/5.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt></p>
-<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/6.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt></p>
-<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/7.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt></p>
-<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/8.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt></p>
-<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/9.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt></p>
-<p>看最后这个，同时存在两行数据，由于注入语句带入进去后，末尾有一个 limit 0,1，那么他只会回显第一行数据</p>
+<p>其实不能说是不执行而是sql语句中的limit导致union select没办法查出回显点</p>
+<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_20230110_211040.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_20230110_211040.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/2.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/3.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/4.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h2 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h2><p>解答如下：</p>
+<p>首先用1去查，在数据库里面变成查id&#x3D;1的数据，很明显，数据库肯定是有这个数据<br>但是如果你id&#x3D;100，数据库没有存那么多数据，那么就会回显后面的union select 1,2,3<br>这里的-1同理，因为数据库没有这个id&#x3D;-1的数据<br>然后是这个and， 1’ and 1&#x3D;2 此时这个结果为false，在数据库里面是查不出来数据的，所以就会回显后面的union select 1,2,3<br>但是如果是1 ‘ and 1&#x3D;1 这个结果是true，那么就会回显前面的结果</p>
+<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/5.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/6.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/7.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/8.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p><img src="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/9.png" class="lazyload" data-srcset="/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>看最后这个，同时存在两行数据，由于注入语句带入进去后，末尾有一个limit 0,1，那么他只会回显第一行数据</p>
 <p>解决问题成功！</p>
 
   </div>
@@ -2724,7 +2718,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://chenzhengkai10.github.io/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=关于and 1=1和and 1=2学习记录 - Oblivion10.&summary=# 关于 and 1=1 和 and 1=2 学习记录"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://chenzhengkai10.github.io/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=关于and 1=1和and 1=2学习记录 - Oblivion10.&summary=关于and 1&#x3D;1和and 1&#x3D;2学习记录"
           
           >
           
@@ -2736,7 +2730,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://chenzhengkai10.github.io/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=关于and 1=1和and 1=2学习记录 - Oblivion10.&summary=# 关于 and 1=1 和 and 1=2 学习记录"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://chenzhengkai10.github.io/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=关于and 1=1和and 1=2学习记录 - Oblivion10.&summary=关于and 1&#x3D;1和and 1&#x3D;2学习记录"
           
           >
           
@@ -2748,7 +2742,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://chenzhengkai10.github.io/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=关于and 1=1和and 1=2学习记录 - Oblivion10.&summary=# 关于 and 1=1 和 and 1=2 学习记录"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://chenzhengkai10.github.io/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=关于and 1=1和and 1=2学习记录 - Oblivion10.&summary=关于and 1&#x3D;1和and 1&#x3D;2学习记录"
           
           >
           
@@ -2783,25 +2777,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2023/01/13/php%E5%AD%A6%E4%B9%A02023-01-13/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>php学习2023-01-13</p>
-          <p class='content'># php 学习 (数组排序、超级全局变量)
+          <p class='content'>php学习(数组排序、超级全局变量)
 
-# 数组排序
-
-sort () - 对数组进行升序排列
-rsort () - 对数组进行降序排列
-asort () - 根据关联数组的值，对数组进...</p>
+数组排序
+sort() - 对数组进行升序排列
+rsort() - 对数组进行降序排列
+asort() - 根据关联数组的值，对数组进行升序排列
+ksor...</p>
         </a>
       
       
         <a class='next' href='/2023/01/10/sqli-labs-23-26a/'>
           <p class='title'>sqli-labs-23-26a<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'># sqli-labs-23-26a
+          <p class='content'>sqli-labs-23-26a
 
-# sqli-labs-23
-在查看源代码时遇到一个函数记录一下先
-preg_replace () 函数
+sqli-labs-23在查看源代码时遇到一个函数记录一下先
+preg_replace() 函数
 语法
-1mixed preg_replace (...</p>
+1mixed preg_replace ( mixed...</p>
         </a>
       
     </div>
@@ -2859,7 +2852,7 @@ preg_replace () 函数
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-text"> 问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94"><span class="toc-text"> 解答</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94"><span class="toc-text">解答</span></a></li></ol>
     </div>
   </section>
 
@@ -3540,7 +3533,7 @@ preg_replace () 函数
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Oblivion10.","url":"https://chenzhengkai10.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://chenzhengkai10.github.io/","sameAs":["https://github.com/volantis-x"],"description":"这是我的专属博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://chenzhengkai10.github.io/","name":"Oblivion10."}},{"@type":"ListItem","position":2,"item":{"@id":"https://chenzhengkai10.github.io/categories/sqli-labs/","name":"sqli-labs"}},{"@type":"ListItem","position":3,"item":{"@id":"https://chenzhengkai10.github.io/2023/01/10/关于and-1-1和and-1-2学习记录/","name":"关于and 1=1和and 1=2学习记录"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Oblivion10.","url":"https://chenzhengkai10.github.io/","keywords":null,"description":"这是我的专属博客","author":{"@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://chenzhengkai10.github.io/","description":"这是我的专属博客"},"publisher":{"@type":"Organization","name":"Oblivion10.","url":"https://chenzhengkai10.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://chenzhengkai10.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于and 1=1和and 1=2学习记录","description":"# 关于 and 1=1 和 and 1=2 学习记录","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://chenzhengkai10.github.io/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"},"author":{"@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://chenzhengkai10.github.io/"},"publisher":{"@type":"Organization","name":"Oblivion10.","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://chenzhengkai10.github.io/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/","wordCount":27,"datePublished":"2023-01-10T13:06:28.000Z","dateModified":"2023-01-13T07:25:26.774Z","articleSection":"sqli-labs","keywords":"sqli-labs","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Oblivion10.","url":"https://chenzhengkai10.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://chenzhengkai10.github.io/","sameAs":["https://github.com/volantis-x"],"description":"这是我的专属博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://chenzhengkai10.github.io/","name":"Oblivion10."}},{"@type":"ListItem","position":2,"item":{"@id":"https://chenzhengkai10.github.io/categories/sqli-labs/","name":"sqli-labs"}},{"@type":"ListItem","position":3,"item":{"@id":"https://chenzhengkai10.github.io/2023/01/10/关于and-1-1和and-1-2学习记录/","name":"关于and 1=1和and 1=2学习记录"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Oblivion10.","url":"https://chenzhengkai10.github.io/","keywords":null,"description":"这是我的专属博客","author":{"@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://chenzhengkai10.github.io/","description":"这是我的专属博客"},"publisher":{"@type":"Organization","name":"Oblivion10.","url":"https://chenzhengkai10.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://chenzhengkai10.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于and 1=1和and 1=2学习记录","description":"关于and 1&#x3D;1和and 1&#x3D;2学习记录","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://chenzhengkai10.github.io/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"},"author":{"@type":"Person","name":"ChenZhengkai10","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://chenzhengkai10.github.io/"},"publisher":{"@type":"Organization","name":"Oblivion10.","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://chenzhengkai10.github.io/2023/01/10/%E5%85%B3%E4%BA%8Eand-1-1%E5%92%8Cand-1-2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/","wordCount":31,"datePublished":"2023-01-10T13:06:28.000Z","dateModified":"2023-01-13T07:25:26.774Z","articleSection":"sqli-labs","keywords":"sqli-labs","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
