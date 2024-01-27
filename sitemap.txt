@@ -1,7 +1,8 @@
+https://chenzhengkai10.github.io/2024/01/24/buuctf%E5%88%B7%E9%A2%982/
+https://chenzhengkai10.github.io/2023/11/04/%E7%BE%8E%E4%BA%9A%E6%9D%AF2022%E4%B8%AA%E4%BA%BA%E8%B5%9B%E5%A4%8D%E7%8E%B0/
 https://chenzhengkai10.github.io/2023/09/17/NSSCTF%E5%88%B7%E9%A2%981/
 https://chenzhengkai10.github.io/2024/01/20/NSSCTF%E5%88%B7%E9%A2%982/
 https://chenzhengkai10.github.io/2023/04/05/upload-labs/
-https://chenzhengkai10.github.io/2023/11/04/%E7%BE%8E%E4%BA%9A%E6%9D%AF2022%E4%B8%AA%E4%BA%BA%E8%B5%9B%E5%A4%8D%E7%8E%B0/
 https://chenzhengkai10.github.io/2022/12/21/sqli-labs-1-8/
 https://chenzhengkai10.github.io/2023/04/23/%E9%B2%B2%E9%B9%8F%E6%9D%AFwp/
 https://chenzhengkai10.github.io/2023/04/21/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/
